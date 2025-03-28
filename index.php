@@ -40,6 +40,17 @@ require('Model/pdo.php');
     foreach ($etudiants as $etudiant) { ?>
         <li><?php echo htmlspecialchars($etudiant['prenom']) . " " . htmlspecialchars($etudiant['nom']); ?></li>
     <?php } ?>
+    <a href="Views/modif_etudiant.php?id=<?php echo htmlspecialchars($etudiant['id']); ?>">
+    <br>
+    <button type="button">Modifier</button>
+    </a>
+    <a href="Views/suppression_etudiant.php?id=<?php echo htmlspecialchars($etudiant['id']); ?>">
+        <br>
+        <br>
+        <button type="button">Supprimer</button>
+    </a>
+</li>
+</a>
 </ul>
 <br>
 <h1>Liste des Classes</h1>
